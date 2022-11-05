@@ -41,6 +41,6 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 ```json
 {
     "key": "20938606",
-    ## option synchronous=true 시에는 result api response 와 같음.
+    // option synchronous=true 시에는 result api response 와 같음.
 }
 ```
