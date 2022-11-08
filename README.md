@@ -106,7 +106,7 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 **Input Data(form-data)**
 
 ```
-encrypted_id : 업데이트할 환자 key,
+key : 업데이트할 환자 key,
 age : 나이(int),
 sex : 성별(M or F),
 patient_name : 이름
