@@ -77,12 +77,31 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 ```json
 {
     "cvd": {
+        "comment": "YOUR RESULT : HIGH RISK. According to a study, 1 in 5 people in HIGH-RISK group will experience a cardiovascular disease event (like    stroke, heart attack or other circulatory problem) within the next 10 years. A HIGH-RISK score does not indicate that you have a cardiovascular disease nor will you definitely experience a stroke or heart attack. However, this signals that there may be hidden diseases that you are not aware of.",
         "pdf": "https://drnoon.s3.ap-northeast-2.amazonaws.com/production/reports/fundus/78694123_Reti-CVD_20221105_030322.pdf"
     },
     "eye": {
-        "pdf": "https://drnoon.s3.ap-northeast-2.amazonaws.com/production/reports/fundus/78694123_Reti-Eye_20221105_030317.pdf",
-        "left_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/2022-11-5/443_030236867779_left_actmap.jpg",
-        "right_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/2022-11-5/443_030252125282_right_actmap.jpg"
+        "left": {
+            "abnormal": true,
+            "comment": "Retinal abnormalities is detected (aged-related macular degeneration, diabetic retinopathy, etc).\nNo significant glaucoma suspect/media opacity",
+            "diseases": {
+                "녹내장의증": "normal",
+                "망막질환": "abnormal",
+                "매체혼탁": "normal"
+            }
+        },
+        "left_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/2022-11-17/443_123527442429_left_actmap.jpg",
+        "pdf": "https://drnoon.s3.ap-northeast-2.amazonaws.com/production/reports/fundus/1234_Reti-Eye_20221117_123534.pdf",
+        "right": {
+            "abnormal": true,
+            "comment": "Retinal abnormalities is detected (aged-related macular degeneration, diabetic retinopathy, etc).\nNo significant glaucoma suspect/media opacity",
+            "diseases": {
+                "녹내장의증": "normal",
+                "망막질환": "abnormal",
+                "매체혼탁": "normal"
+            }
+        },
+        "right_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/2022-11-17/443_123531980209_right_actmap.jpg"
     },
     "status": "READY"
 }
