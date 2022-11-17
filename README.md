@@ -27,7 +27,7 @@ patient_name : 이름
 
 ```
 synchronous : true or false, 업로드시 result api 결과까지 볼것인지(판독과 레포트 생성에 시간이 걸리기 때문에 false로 하는것을 추천드립니다.),
-report_type : pdf or text , text 는 간단한 Positive, Negative 나 저중고 정도의 정보를 전달하기 때문에 maihub 연동시에는 pdf를 넣어주시면 될거 같습니다.
+report_type : pdf or text , text , pdf 는 pdf파일만, text 는 간단한 Comment 와 요약 정보, both 는 둘다.
 pdf_type : url or base64, pdf 레포트를 url 로 받을 것인지, base64 로 encode된 text를 받을 것인지.
 diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또는 둘다 받을 것인지에 대한 option
 ```
