@@ -6,6 +6,8 @@
 
 ** ex) 데모계정 maihub:1234 의 경우 Basic <maihub:1234를 base64 encode> ==> "Basic bWFpaHViOjEyMzQ="
 
+** 앞으로 배포 전 테스트가 필요할 때는 https://test.mediwhale.ai 를 사용하겠습니다. 
+
 ## Upload
 
 **URL** : `https://api.mediwhale.ai/v1/external/maihub/analyse?synchronous=false&report_type=pdf&pdf_type=url&diagnose_type=both`
@@ -21,6 +23,16 @@ patient_id : 환자번호,
 age : 나이(int),
 sex : 성별(M or F),
 patient_name : 이름
+camera_type : 카메라 type (ex) TOPCON_NW400
+
+hospital_id : maihub 측의 병원별 unique id
+hospital_name : 병원이름
+hospital_address : 병원주소
+
+(optional) : 입력이 가능하시면 input 하시면 됩니다.
+hospital_phone : 병원전화번호
+hospital_email : 이메일
+hospital_distributor_logo_url : 병원로그 이미지 url
 ```
 
 **Option(parameter)**
