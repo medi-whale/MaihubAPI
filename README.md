@@ -75,7 +75,6 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 **Option(parameter)**
 
 ```
-synchronous : true or false, 업로드시 result api 결과까지 볼것인지(판독과 레포트 생성에 시간이 걸리기 때문에 false로 하는것을 추천드립니다.),
 report_type : pdf or text 또는 both, both 면 둘다표시.
 pdf_type : url or base64, pdf 레포트를 url 로 받을 것인지, base64 로 encode된 text를 받을 것인지.
 diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또는 둘다 받을 것인지에 대한 option
@@ -89,32 +88,41 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 ```json
 {
     "cvd": {
-        "comment": "YOUR RESULT : HIGH RISK. According to a study, 1 in 5 people in HIGH-RISK group will experience a cardiovascular disease event (like    stroke, heart attack or other circulatory problem) within the next 10 years. A HIGH-RISK score does not indicate that you have a cardiovascular disease nor will you definitely experience a stroke or heart attack. However, this signals that there may be hidden diseases that you are not aware of.",
-        "pdf": "https://drnoon.s3.ap-northeast-2.amazonaws.com/production/reports/fundus/78694123_Reti-CVD_20221105_030322.pdf"
+        "comment": "YOUR RESULT : MODERATE RISK. According to a study, 1 in 10 people in MODERATE-RISK group will experience a cardiovascular disease event (like stroke, heart attack or other circulatory problem) within the next 10 years. A MODERATE-RISK score does not indicate that you have a cardiovascular disease nor will you definitely experience a heart attack or stroke, but it does signal the need to make changes to your lifestyle.",
+        "left_high_quality": "1.2.410.20141210.6.50001.1.202212201747170278.2.dcm",
+        "pdf": "https://drnoon.s3.ap-northeast-2.amazonaws.com/production/reports/cvd/c61a5e1109adafbb5c6d7b7807fc137455318f72fc639439d0868cd37458ed21/00513122_cvd_20240520_071804.pdf",
+        "quality_pass": 1,
+        "right_high_quality": "1.2.410.20141210.6.50001.1.202212201747170278.2.dcm",
+        "score": 31,
+        "threshold1": 30,
+        "threshold2": 40
     },
     "eye": {
         "left": {
             "abnormal": true,
             "comment": "Retinal abnormalities is detected (aged-related macular degeneration, diabetic retinopathy, etc).\nNo significant glaucoma suspect/media opacity",
             "diseases": {
-                "녹내장의증": "normal",
-                "망막질환": "abnormal",
-                "매체혼탁": "normal"
-            }
+                "Glaucoma": "normal",
+                "Media Opacity": "normal",
+                "Retina Disorder": "abnormal"
+            },
+            "quality_pass": 1
         },
-        "left_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/2022-11-17/443_123527442429_left_actmap.jpg",
-        "pdf": "https://drnoon.s3.ap-northeast-2.amazonaws.com/production/reports/fundus/1234_Reti-Eye_20221117_123534.pdf",
+        "left_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/4416a7dd742165a7a8b6eb3958e299f14ca4e95065df7b687489a47b80ecfa51/443_071753790011_left_actmap.jpg",
+        "pdf": "https://drnoon.s3.ap-northeast-2.amazonaws.com/production/reports/eye/5f9c2c9b8245b158e924c6450ff082881b8a6e8b15b19dea3b3c3d96d975bfbd/00513122_eye_20240520_071803.pdf",
         "right": {
             "abnormal": true,
             "comment": "Retinal abnormalities is detected (aged-related macular degeneration, diabetic retinopathy, etc).\nNo significant glaucoma suspect/media opacity",
             "diseases": {
-                "녹내장의증": "normal",
-                "망막질환": "abnormal",
-                "매체혼탁": "normal"
-            }
+                "Glaucoma": "normal",
+                "Media Opacity": "normal",
+                "Retina Disorder": "abnormal"
+            },
+            "quality_pass": 1
         },
-        "right_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/2022-11-17/443_123531980209_right_actmap.jpg"
+        "right_heatmap_url": "https://dtw4kza58cxg1.cloudfront.net/production/processed/ef4fa0aed3227bc7c595038090ca3a131cabac37ad7382c9f13a9dbf9eb1600b/443_071734045017_right_actmap.jpg"
     },
+    "key": "27960540",
     "status": "READY"
 }
 ```
@@ -147,7 +155,6 @@ patient_name : 이름
 **Option(parameter)**
 
 ```
-synchronous : true or false, 업로드시 result api 결과까지 볼것인지(판독과 레포트 생성에 시간이 걸리기 때문에 false로 하는것을 추천드립니다.),
 report_type : pdf or text , text 는 간단한 Positive, Negative 나 저중고 정도의 정보를 전달하기 때문에 maihub 연동시에는 pdf를 넣어주시면 될거 같습니다.
 pdf_type : url or base64, pdf 레포트를 url 로 받을 것인지, base64 로 encode된 text를 받을 것인지.
 diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또는 둘다 받을 것인지에 대한 option
