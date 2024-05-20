@@ -17,8 +17,8 @@
 **Input Data(form-data)**
 
 ```
-right_image : 이미지 파일(.jpg,.png,.jpeg,.tif 등) 또는 다이콤파일(.dcm),
-left_image : 이미지 파일(.jpg,.png,.jpeg,.tif 등) 또는 다이콤파일(.dcm),
+right_image : 이미지 파일(.jpg,.png,.jpeg,.tif 등) 또는 다이콤파일(.dcm), (이미지가 다수인 경우 배열로 전달)
+left_image : 이미지 파일(.jpg,.png,.jpeg,.tif 등) 또는 다이콤파일(.dcm), (이미지가 다수인 경우 배열로 전달)
 patient_id : 환자번호,
 age : 나이(int),
 sex : 성별(M or F),
