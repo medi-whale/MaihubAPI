@@ -6,11 +6,11 @@
 
 ** ex) 데모계정 maihub:1234 의 경우 Basic <maihub:1234를 base64 encode> ==> "Basic bWFpaHViOjEyMzQ="
 
-** 앞으로 배포 전 테스트가 필요할 때는 https://test.mediwhale.ai 를 사용하겠습니다. 
+** 앞으로 배포 전 테스트가 필요할 때는 https://test.mediwhale.net 를 사용하겠습니다. 
 
 ## Upload
 
-**URL** : `https://api.mediwhale.ai/v1/external/maihub/analyse?synchronous=false&report_type=pdf&pdf_type=url&diagnose_type=both`
+**URL** : `https://mediwhale.net/v1/external/maihub/analyse?synchronous=false&report_type=pdf&pdf_type=url&diagnose_type=both`
 
 **Method** : `POST`
 
@@ -30,6 +30,7 @@ hospital_name : 병원이름
 hospital_address : 병원주소
 
 (optional) : 입력이 가능하시면 input 하시면 됩니다.
+examination_type: checkup/outpatient
 hospital_phone : 병원전화번호
 hospital_email : 이메일
 hospital_distributor_logo_url : 병원로그 이미지 url
@@ -68,7 +69,7 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 
 ## Result
 
-**URL** : `https://api.mediwhale.ai/v1/external/maihub/result?key=20938606&report_type=pdf&pdf_type=url&diagnose_type=both`
+**URL** : `https://mediwhale.net/v1/external/maihub/result?key=20938606&report_type=pdf&pdf_type=url&diagnose_type=both`
 
 **Method** : `GET`
 
@@ -138,7 +139,7 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 
 ## Update
 
-**URL** : `https://api.mediwhale.ai/v1/external/maihub/update?pdf_type=url&report_type=pdf&diagnose_type=both`
+**URL** : `https://mediwhale.net/v1/external/maihub/update?pdf_type=url&report_type=pdf&diagnose_type=both`
 
 **Method** : `POST`
 
@@ -158,6 +159,7 @@ patient_name : 이름
 report_type : pdf or text , text 는 간단한 Positive, Negative 나 저중고 정도의 정보를 전달하기 때문에 maihub 연동시에는 pdf를 넣어주시면 될거 같습니다.
 pdf_type : url or base64, pdf 레포트를 url 로 받을 것인지, base64 로 encode된 text를 받을 것인지.
 diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또는 둘다 받을 것인지에 대한 option
+examination_type: checkup/outpatient
 ```
 
 **Success Response**
@@ -174,7 +176,7 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 
 ## Credit
 
-**URL** : `https://api.mediwhale.ai/v1/external/maihub/credit`
+**URL** : `https://mediwhale.net/v1/external/maihub/credit`
 
 **Method** : `GET`
 
