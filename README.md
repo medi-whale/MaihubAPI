@@ -79,6 +79,7 @@ diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또�
 report_type : pdf or text 또는 both, both 면 둘다표시.
 pdf_type : url or base64, pdf 레포트를 url 로 받을 것인지, base64 로 encode된 text를 받을 것인지.
 diagnose_type : eye or cvd or both , 안과, 심혈관 레포트 중 하나 또는 둘다 받을 것인지에 대한 option
+locale : 출력 할 레포트 언어(ko, en, zh) option
 ```
 **Success Response**
 
